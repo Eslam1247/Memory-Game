@@ -1,0 +1,125 @@
+
+/*
+img {
+    width: 250px;
+    height: 250px;
+}
+*/
+
+
+.control-bottons {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(51, 51, 51, 0.9);
+    height: 100%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.control-bottons span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.info-container {
+    width: 108px;
+    margin: 20px auto 0;
+    background-color: #f6f6f6;
+    padding: 20px;
+    font-size: 24px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.info-container .name {
+    float: left;
+    width: 50%;
+}
+
+.info-container .tries {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background-color:#36aef49c;
+   
+  }
+  
+  .gameContainer {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+  
+  .memoryCard {
+    width: 23%;
+    height: 23%;
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .memoryCard:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .memoryCard.flip {
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+  
+  .front,
+  .back {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+ 
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+  }
+  
+@media (max-width: 375px) {
+    .gameContainer {
+        width: 350px;
+        height: 489px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        perspective: 1000px;}
+        .memoryCard {
+          width: 18%;
+          height: 18%;
+        }
+}
